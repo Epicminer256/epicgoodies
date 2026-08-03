@@ -1,0 +1,32 @@
+{
+    "storeInfo": {
+        "author": "Epicminer256",
+        "authors": [
+            "Epicminer256"
+        ],
+        "barDark": "#395472",
+        "barLight": "#395472",
+        "bgDark": "#262c4d",
+        "bgLight": "#60a8c0",
+        "boxDark": "#313131",
+        "boxLight": "#f7f7f7",
+        "categories": [
+            "utility"
+        ],
+        "consoles": [
+            "3DS"
+        ],
+        "description": "Repo for ROMs and other goodies! Please donate to archive.org",
+        "file": "sdmc:/3ds/Universal-Updater/stores/EpicGoodies.unistore",
+        "outlineDark": "#f00000",
+        "outlineLight": "#f00000",
+        "revision": 1,
+        "textDark": "#ffffff",
+        "textLight": "#000000",
+        "title": "EpicGoodies",
+        "url": "https://db.universal-team.net/unistore/universal-db.unistore",
+        "version": 2
+    },
+    "storeContent": [
+    ]
+}
