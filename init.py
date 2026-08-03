@@ -60,8 +60,7 @@ for u in range(0, len(masterurls)):
                 templatejson["storeContent"].append({
                     "info": {
                         "author": "epicminer256",
-                        "catagory": [ext],
-                        "console": ["3DS"],
+                        "console": [ext],
                         "last_updated": "Sometime",
                         "title": clean_name,
                         "version": "v1"
