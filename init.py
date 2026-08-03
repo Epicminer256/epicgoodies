@@ -12,32 +12,7 @@ masterurls = [
     ["MySnesRoms", "smc"],
     ["tsf-2002-gba-roms-collection", "gba"],
     ["n64-roms_202405", "n64"],
-	["psx-chd-roms-a", "psx"],
-	["psx-chd-roms-b", "psx"],
-	["psx-chd-roms-c", "psx"],
-	["psx-chd-roms-d", "psx"],
-	["psx-chd-roms-e", "psx"],
-	["psx-chd-roms-f", "psx"],
-	["psx-chd-roms-g", "psx"],
-	["psx-chd-roms-h", "psx"],
-	["psx-chd-roms-i", "psx"],
-	["psx-chd-roms-j", "psx"],
-	["psx-chd-roms-k", "psx"],
-	["psx-chd-roms-l", "psx"],
-	["psx-chd-roms-m", "psx"],
-	["psx-chd-roms-n", "psx"],
-	["psx-chd-roms-o", "psx"],
-	["psx-chd-roms-p", "psx"],
-	["psx-chd-roms-q", "psx"],
-	["psx-chd-roms-r", "psx"],
-	["psx-chd-roms-s", "psx"],
-	["psx-chd-roms-t", "psx"],
-	["psx-chd-roms-u", "psx"],
-	["psx-chd-roms-v", "psx"],
-	["psx-chd-roms-w", "psx"],
-	["psx-chd-roms-x", "psx"],
-	["psx-chd-roms-y", "psx"],
-	["psx-chd-roms-z", "psx"]
+    ["psx_chd_torrent_2_20220105","psx"],
 ]
 
 fileTypesAccepted = [
@@ -81,7 +56,7 @@ templatejson = json.loads(open("base.json").read())
 templatejson["storeInfo"]["revision"]+=1
 open("base.json", "w").write(json.dumps(templatejson))
 
-print("Working on que, ETA is "+len(masterurls)*10+"seconds")
+print("Working on que, ETA is "+str(len(masterurls)*6)+"seconds")
 
 for u in range(0, len(masterurls)):
     print("working on "+masterurls[u][0])
