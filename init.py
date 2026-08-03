@@ -8,11 +8,9 @@ from pathlib import Path
 
 masterurls = [
 	["world-ends-with-you-the", "nds"],
-    ["blockbuster-competition-2-nba-jam-judge-dredd-jue", "md"],
-    ["MySnesRoms", "smc"],
-    ["tsf-2002-gba-roms-collection", "gba"],
     ["n64-roms_202405", "n64"],
     ["psx_chd_torrent_2_20220105","psx"],
+    ["gbc_roms_202605", "gbc"]
 ]
 
 fileTypesAccepted = [
