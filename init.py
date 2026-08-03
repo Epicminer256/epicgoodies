@@ -66,12 +66,12 @@ for u in range(0, len(masterurls)):
                         "title": clean_name,
                         "version": "v1"
                     },
-                    "Download file":{
+                    "Download file":[{
                         "file": file.url,
                         "message": "Downloading...",
-                        "output": downloadpath,
+                        "output": downloadpath+"/"+clean_name,
                         "type": "downloadFile"
-                    }
+                    }]
                 })
 
 open("epicgoodies.unistore", "w").write(json.dumps(templatejson, indent="\t"))
