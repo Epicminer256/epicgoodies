@@ -18,6 +18,8 @@ fileTypesAccepted = [
 	"3dsx",
 	"cia",
 	"nds",
+    "n64",
+    "z64",
 	"gb",
 	"gbc",
 	"gba",
