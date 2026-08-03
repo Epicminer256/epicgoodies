@@ -8,8 +8,10 @@ from pathlib import Path
 
 masterurls = [
 	["world-ends-with-you-the", "nds"],
-    ["blockbuster-competition-2-nba-jam-judge-dredd-jue", "md"]
-    ["MySnesRoms", "smc"]
+    ["blockbuster-competition-2-nba-jam-judge-dredd-jue", "md"],
+    ["MySnesRoms", "smc"],
+    ["tsf-2002-gba-roms-collection", "gba"],
+    ["n64-roms_202405", "n64"],
 	["psx-chd-roms-a", "psx"],
 	["psx-chd-roms-b", "psx"],
 	["psx-chd-roms-c", "psx"],
@@ -76,6 +78,10 @@ fileTypesAccepted = [
 ]
 
 templatejson = json.loads(open("base.json").read())
+templatejson["storeInfo"]["revision"]+=1
+open("base.json", "w").write(json.dumps(templatejson))
+
+print("Working on que, ETA is "+len(masterurls)*10+"seconds")
 
 for u in range(0, len(masterurls)):
     print("working on "+masterurls[u][0])
@@ -105,4 +111,5 @@ for u in range(0, len(masterurls)):
     time.sleep(5)
     print("continuing")
 
-open("epicgoodies.unistore", "w").write(json.dumps(templatejson, indent="\t"))
+# open("epicgoodies.unistore", "w").write(json.dumps(templatejson, indent="\t"))
+open("epicgoodies.unistore", "w").write(json.dumps(templatejson))
