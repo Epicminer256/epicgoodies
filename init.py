@@ -60,13 +60,13 @@ for u in range(0, len(masterurls)):
                 templatejson["storeContent"].append({
                     "info": {
                         "author": "epicminer256",
-                        "catagory": ext,
-                        "console": "3DS",
+                        "catagory": [ext],
+                        "console": ["3DS"],
                         "last_updated": "Sometime",
                         "title": clean_name,
                         "version": "v1"
                     },
-                    "Download file":[{
+                    "script":[{
                         "file": file.url,
                         "message": "Downloading...",
                         "output": downloadpath+"/"+clean_name,
