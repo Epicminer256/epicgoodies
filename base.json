@@ -5,7 +5,11 @@
 		"description": "Roms and other goodies",
 		"url": "https://github.com/Epicminer256/epicgoodies/raw/refs/heads/main/epicgoodies.unistore",
 		"file": "epicgoodies.unistore",
+<<<<<<< HEAD
 		"revision": 19,
+=======
+		"revision": 29,
+>>>>>>> 3adbcd8 (test)
 		"version": 4
 	},
 	"storeContent": []
