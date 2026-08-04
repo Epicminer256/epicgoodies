@@ -10,6 +10,13 @@ from urllib.parse import quote
 from bs4 import BeautifulSoup
 
 masterurls = [
+
+        [
+            "Nintendo_DS.unistore",
+            [
+                ["world-ends-with-you-the", "nds"],
+            ]
+        ],
         [
             "PSX_And_N64.unistore",
             [
