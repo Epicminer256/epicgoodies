@@ -111,8 +111,6 @@ for m in range(0, len(masterurls)):
     templatejson["storeInfo"]["url"] = "https://github.com/Epicminer256/epicgoodies/raw/refs/heads/main/"+unistore_file
     current_urls = current_unistore[1]
     print(" ---- Currently making "+unistore_file+" ---- ")
-
-    file_count = 0
     for u in range(0, len(current_urls)):
         current_masterurl = current_urls[u][0]
         current_filetype = current_urls[u][1]
@@ -120,7 +118,6 @@ for m in range(0, len(masterurls)):
         item=internetarchive.get_item(current_masterurl)
         downloadpath="sdmc:/roms/"+current_filetype
         files = item.get_files()
-        file_count += len(list(files))
         print("This URL has "+str(len(list(files)))+" files total")
         for file in files:
             clean_name = os.path.basename(file.name)
@@ -141,8 +138,6 @@ for m in range(0, len(masterurls)):
                             "type": "downloadFile"
                         }]
                     })
-        if file_count > 5000:
-            print("WARNING: This is too many roms in one unistore, consider splitting it")
         print("sleeping for 5 seconds...")
         time.sleep(5)
         print("continuing")
