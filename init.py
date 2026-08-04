@@ -117,8 +117,8 @@ for m in range(0, len(masterurls)):
         print("working on "+current_masterurl)
         item=internetarchive.get_item(current_masterurl)
         downloadpath="sdmc:/roms/"+current_filetype
-        files = item.get_files()
-        print("This URL has "+str(len(list(files)))+" files total")
+        files = list(item.get_files())
+        print("This URL has "+str(len(files))+" files total")
         for file in files:
             clean_name = os.path.basename(file.name)
             for ext in fileTypesAccepted:
