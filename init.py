@@ -9,6 +9,11 @@ from pathlib import Path
 from urllib.parse import quote
 from bs4 import BeautifulSoup
 
+injecturls = [
+	["Fossil Fighters Champions USA.nds", "https://archive.org/download/nds_apfix/unmodified/Fossil%20Fighters%20Champions%20%28USA%29%20%28NDSi%20Enhanced%29.zip/Fossil%20Fighters%20Champions%20%28USA%29%20%28NDSi%20Enhanced%29.nds", "nds", "Nintendo_DS.unistore"]
+	
+]
+
 masterurls = [
 
         [
@@ -118,9 +123,31 @@ for m in range(0, len(masterurls)):
     templatejson["storeInfo"]["url"] = "https://github.com/Epicminer256/epicgoodies/raw/refs/heads/main/"+unistore_file
     current_urls = current_unistore[1]
     print(" ---- Currently making "+unistore_file+" ---- ")
+    
     for u in range(0, len(current_urls)):
         current_masterurl = current_urls[u][0]
         current_filetype = current_urls[u][1]
+
+        print("finding manually injected files...")
+        for i in range(0, len(injecturls)):
+            if injecturls[i][3] == unistore_file:
+                print("found "+injecturls[i][0])
+                templatejson["storeContent"].append({
+                    "info": {
+                        "author": "epicminer256",
+                            "console": injecturls[i][2],
+                            "last_updated": "Sometime",
+                            "title": injecturls[i][0],
+                            "version": "v1"
+                        },
+                        "Download File":[{
+                            "file": injecturls[i][1],
+                            "message": "Downloading...",
+                            "output": "sdmc:/roms/"+injecturls[i][2]+"/"+injecturls[i][0],
+                            "type": "downloadFile"
+                        }]
+                    })
+
         print("working on "+current_masterurl)
         item=internetarchive.get_item(current_masterurl)
         downloadpath="sdmc:/roms/"+current_filetype
